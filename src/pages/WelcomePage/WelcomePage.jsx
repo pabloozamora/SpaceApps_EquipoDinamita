@@ -15,7 +15,7 @@ function WelcomePage() {
                     <Link to="/animation">Funny animation</Link>
                 </li>
                 <li>
-                    <Link to="/page2">Page 2</Link>
+                    <a href="/Heavenly_trinity.pdf">Short Story</a>
                 </li>
             </ul>
         </nav>
