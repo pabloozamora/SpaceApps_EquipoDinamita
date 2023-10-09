@@ -28,9 +28,11 @@ $shadowStroke: max(calc(1vw), 10px);
     margin: auto;
     aspect-ratio: 1;
     border-radius: 50%;
-    animation-name: sunrise;
-    animation-duration: 4s;
+    animation-name: sunrise, glowing;
+    animation-duration: 4s, 3s;
     animation-fill-mode: forwards;
+    animation-timing-function: ease, ease-in-out;
+    animation-iteration-count: 1, infinite;
     box-shadow: 
         0px 0px 0px $shadowStroke #ffdd0097,
         0px 0px 0px calc($shadowStroke*2.5) #ffdd0097,
@@ -42,6 +44,33 @@ $shadowStroke: max(calc(1vw), 10px);
 @keyframes sunrise{
     100% {
         right: 0;
+    }
+}
+
+@keyframes glowing{
+    0%{
+        box-shadow: 
+        0px 0px 0px $shadowStroke #ffdd0097,
+        0px 0px 0px calc($shadowStroke*2.5) #ffdd0097,
+        0px 0px 0px calc($shadowStroke*5) #ffdd0097,
+        0px 0px 30px calc($shadowStroke*7.5) #ffdd0097,
+        ;
+    }
+    50% {
+        box-shadow: 
+        0px 0px 0px $shadowStroke #ffdd0097,
+        0px 0px 0px calc($shadowStroke*4.5) #ffdd0097,
+        0px 0px 0px calc($shadowStroke*7.5) #ffdd0097,
+        0px 0px 30px calc($shadowStroke*9.5) #92929297,
+        ;
+    }
+    100%{
+        box-shadow: 
+        0px 0px 0px $shadowStroke #ffdd0097,
+        0px 0px 0px calc($shadowStroke*2.5) #ffdd0097,
+        0px 0px 0px calc($shadowStroke*5) #ffdd0097,
+        0px 0px 30px calc($shadowStroke*7.5) #ffdd0097,
+        ;
     }
 }
 
