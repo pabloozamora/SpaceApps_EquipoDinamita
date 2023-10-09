@@ -1,0 +1,8 @@
+.player{
+    z-index: 100;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
