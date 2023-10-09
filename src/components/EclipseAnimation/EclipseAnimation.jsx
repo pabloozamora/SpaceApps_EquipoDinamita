@@ -34,7 +34,7 @@ function EclipseAnimation() {
         canvasContext.fillStyle = "white";
         canvasContext.moveTo(star.x - 1, star.y - 1);
         canvasContext.lineTo(star.x, star.y);
-        canvasContext.strokeStyle = '#ffffff';
+        canvasContext.strokeStyle = "#ffffff";
         canvasContext.stroke();
       });
     }
@@ -42,7 +42,12 @@ function EclipseAnimation() {
 
   return (
     <div className={style.eclipse}>
-      <canvas className={style.sky} ref={canvasRef} width={"1920"} height={"1080"}/>
+      <canvas
+        className={style.sky}
+        ref={canvasRef}
+        width={"1920"}
+        height={"1080"}
+      ></canvas>
       <div className={style.sun}></div>
       <div className={style.moon}></div>
     </div>
