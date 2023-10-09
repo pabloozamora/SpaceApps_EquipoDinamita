@@ -1,0 +1,114 @@
+.welcomePage{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.topBar{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.topBar ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.topBar a{
+  color: gray;
+  opacity: 0;
+  animation: show-h1 1s  4.5s forwards;
+  text-decoration: none;
+}
+
+.topBar a:hover{
+  color: rgb(219, 176, 6);
+}
+
+.welcomeBanner{
+  width: 100%;
+  height: calc(100vh);
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.solarImage{
+  height: 1000px;
+  position: absolute;
+  top: calc(100vh - 500px);
+  animation: enter-animation 3s;
+  
+}
+
+.titleContainer{
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20vh;
+}
+
+.titleContainer h1{
+ color: white; 
+ text-align: center;
+ margin: 0;
+ font-size: 70px;
+ opacity: 0;
+ animation: show-h1 1s  3s forwards;
+ text-align: center;
+}
+
+.titleContainer h2{
+  margin: 0;
+  color: rgb(219, 176, 6);
+  font-size: 30px;
+  opacity: 0;
+ animation: show-h2 1s  4s forwards;
+ text-align: center;
+}
+
+.wave{
+  position: absolute;
+  bottom: 0;
+}
+
+.wave path{
+  fill: white;
+}
+
+@keyframes enter-animation {
+  from{
+    transform: translateY(300px) scale(0);
+  }
+}
+
+@keyframes show-h1{
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes show-h2{
+  from{
+    transform: translateY(5px);
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes allow-scroll{
+  to{
+    overflow: auto;
+  }
+}

@@ -1,0 +1,126 @@
+$shadowStroke: max(calc(1vw), 10px);
+$moonSize: min(calc(1vw), 450px);
+
+.eclipse {
+  display: block;
+  height: 99vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.sky {
+  width: 100vw;
+  height: 99.2vh;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.sun {
+  max-width: 400px;
+  max-height: 400px;
+  width: 40%;
+  background-color: #ffde00;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -150%;
+  left: 0;
+  margin: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation-name: sunrise, glowing;
+  animation-duration: 4s, 5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease, ease-in-out;
+  animation-iteration-count: 1, infinite;
+  box-shadow: 0px 0px 0px $shadowStroke #ffdd0097,
+    0px 0px 0px calc($shadowStroke * 2.5) #ffdd0097,
+    0px 0px 0px calc($shadowStroke * 5) #ffdd0097,
+    0px 0px 30px calc($shadowStroke * 7.5) #ffdd00ba;
+}
+
+@keyframes sunrise {
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0px 0px 0px $shadowStroke #ffdd0097,
+      0px 0px 0px calc($shadowStroke * 2.5) #ffdd0097,
+      0px 0px 0px calc($shadowStroke * 5) #ffdd0097,
+      0px 0px 30px calc($shadowStroke * 7.5) #ffdd00ba;
+  }
+  50% {
+    box-shadow: 0px 0px 0px $shadowStroke #ffdd0097,
+      0px 0px 0px calc($shadowStroke * 4.5) #ffdd0097,
+      0px 0px 0px calc($shadowStroke * 7.5) #ffdd0097,
+      0px 0px 30px calc($shadowStroke * 9.5) #ffdd00ba;
+  }
+  100% {
+    box-shadow: 0px 0px 0px $shadowStroke #ffdd0097,
+      0px 0px 0px calc($shadowStroke * 2.5) #ffdd0097,
+      0px 0px 0px calc($shadowStroke * 5) #ffdd0097,
+      0px 0px 30px calc($shadowStroke * 7.5) #ffdd00ba;
+  }
+}
+
+.moon {
+  font-size: $moonSize;
+  max-width: 450px;
+  max-height: 450px;
+  width: 40%;
+  background-color: rgb(48, 48, 48);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -150%;
+  margin: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation-name: moonrise;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+.moon::after {
+  content: "";
+  font-size: $moonSize;
+  width: calc($moonSize * 3.5);
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(82, 82, 82);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  animation-name: moonriseAfter;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  box-shadow: -1em -10em 0px 1.5em rgb(82, 82, 82),
+    -10em -5em 0px 0.04em rgb(82, 82, 82), 1em 7em 0px 0.7em rgb(82, 82, 82),
+    -8em 4em 0px 1.4em rgb(82, 82, 82);
+}
+
+@keyframes moonrise {
+  30% {
+    background-color: rgb(48, 48, 48);
+  }
+  70% {
+    background-color: rgb(25, 25, 25);
+  }
+  100% {
+    left: 0;
+    background-color: black;
+  }
+}
+
+@keyframes moonriseAfter {
+    100% {
+        opacity: 0;
+    }
+  }
+  
