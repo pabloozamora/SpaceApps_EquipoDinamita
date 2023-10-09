@@ -21,7 +21,7 @@ function WelcomePage() {
                     <a href="/Heavenly_trinity.pdf">Short Story</a>
                 </li>
                 <li>
-                    <Link to="/maze">Eclipse Facts Maze</a>
+                    <Link to="/maze">Eclipse Facts Maze</Link>
                 </li>
             </ul>
         </nav>
