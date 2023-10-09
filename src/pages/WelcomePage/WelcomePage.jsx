@@ -12,7 +12,7 @@ function WelcomePage() {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/page1">Page 1</Link>
+                    <Link to="/animation">Funny animation</Link>
                 </li>
                 <li>
                     <Link to="/page2">Page 2</Link>

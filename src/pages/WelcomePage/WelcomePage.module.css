@@ -25,6 +25,7 @@
   color: gray;
   opacity: 0;
   animation: show-h1 1s  4.5s forwards;
+  text-decoration: none;
 }
 
 .topBar a:hover{

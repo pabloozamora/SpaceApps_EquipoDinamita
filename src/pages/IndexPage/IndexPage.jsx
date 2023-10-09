@@ -5,7 +5,8 @@ import { EclipseAnimation } from '../../components/eclipseAnimation/eclipseAnima
 
 const IndexPage = () => (
     <Routes>
-        <Route path="/" element={<EclipseAnimation />} />
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/animation" element={<EclipseAnimation />} />
     </Routes>
 )
 
