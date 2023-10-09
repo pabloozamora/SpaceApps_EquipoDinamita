@@ -20,6 +20,9 @@ function WelcomePage() {
                 <li>
                     <a href="/Heavenly_trinity.pdf">Short Story</a>
                 </li>
+                <li>
+                    <a href="/maze">Eclipse Facts Maze</a>
+                </li>
             </ul>
         </nav>
       <div className={styles.welcomeBanner}>

@@ -11,6 +11,7 @@ function InfoPopUp({
             <PopUp close={close} maxWidth={370} callback={callback}>
             <h2 className={styles.title}>Fun Fact</h2>
             <p className={styles.text}>{text}</p>
+            <p className={styles.source}>Source: https://science.nasa.gov/eclipses/</p>
         </PopUp>
         )
     )

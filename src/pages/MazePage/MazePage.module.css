@@ -4,4 +4,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
+}
+
+.pageTitle{
+    margin-bottom: 30px;
+}
+
+.mazeContainer{
+    background-color: #08141E;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }

@@ -1,4 +1,10 @@
-.title, .text{
+.title, .text, .source{
     color:black;
     text-align: center;
+}
+
+.source{
+    font-size: 10px;
+    text-align: left;
+    margin-top: 10px;
 }
