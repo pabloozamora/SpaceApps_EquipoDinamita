@@ -101,8 +101,8 @@ $moonSize: min(calc(1vw), 450px);
   animation-duration: 4s;
   animation-fill-mode: forwards;
   box-shadow: -1em -10em 0px 1.5em rgb(82, 82, 82),
-    -10em -5em 0px 0.04em rgb(82, 82, 82), 1em 7em 0px 1em rgb(82, 82, 82),
-    -8em 4em 0px 2em rgb(82, 82, 82);
+    -10em -5em 0px 0.04em rgb(82, 82, 82), 1em 7em 0px 0.7em rgb(82, 82, 82),
+    -8em 4em 0px 1.4em rgb(82, 82, 82);
 }
 
 @keyframes moonrise {
