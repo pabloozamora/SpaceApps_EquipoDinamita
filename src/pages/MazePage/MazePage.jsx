@@ -1,6 +1,5 @@
 import React from "react";
 import styles from './MazePage.module.css';
-import getMaze from "../../helpers/generateMaze";
 import Maze from "../../components/Maze/Maze";
 
 function MazePage() {
