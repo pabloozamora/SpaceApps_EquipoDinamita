@@ -15,6 +15,9 @@ function WelcomePage() {
                     <Link to="/animation">Funny animation</Link>
                 </li>
                 <li>
+                    <Link to="/solarEclipses">Types of Solar Eclipses</Link>
+                </li>
+                <li>
                     <a href="/Heavenly_trinity.pdf">Short Story</a>
                 </li>
             </ul>
