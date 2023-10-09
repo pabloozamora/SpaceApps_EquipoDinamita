@@ -1,0 +1,57 @@
+.annularEclipse {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.sun {
+    width: 200px;
+    height: 200px;
+    transform: translate(0%);
+    border-radius: 50%;
+    background: #DBE6E0;
+    box-shadow: 0 0 50px rgba(219, 230, 224, 1);
+  }
+  
+.moon {
+    position: absolute;
+    left: 10px;
+    top: 1px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #010101;
+    box-shadow: inset 0 0 50px rgba(150, 150, 150, 0.2);
+    transform-origin: 50% 150%;
+    transform: rotate(0deg);
+}
+
+.moon.animate {
+    transform: rotate(-60deg);
+    animation: eclipseAnnular 10s infinite linear alternate;
+}
+
+.annularEclipse.animate {
+    opacity: 1;
+}
+
+@keyframes eclipseAnnular {
+    0% {
+        transform: rotate(-50deg);
+    }
+
+    45%, 50%, 55% {
+        transform: rotate(0deg);
+    }
+
+    90% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(50deg);
+    }
+}
